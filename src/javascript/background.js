@@ -2,7 +2,7 @@ function ChaZD(queryWord, useHttps, wordSource, sendResponse) {
     this.wordSource = wordSource;
     this.useHttps = useHttps;
     var url = getbasicurl(useHttps, queryWord);
-    // console.log("Query url: " + url);
+    //console.log("Query url: " + url);
     var queryResult = {};
     var self = this;
     var xhr = new XMLHttpRequest();
@@ -10,7 +10,14 @@ function ChaZD(queryWord, useHttps, wordSource, sendResponse) {
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState != 4) {return;}
-        var result = JSON.parse(xhr.responseText);
+        //console.log("xhr.responseText:", xhr.responseText);
+        var result;
+        try {
+            result = JSON.parse(xhr.responseText);
+        } catch (error) {
+            console.log("failed to parse response:", xhr.responseText);
+            return;
+        }
 
         if (queryWord.indexOf("-") !== -1 && !self.checkErrorCode(result.errorCode).error && !self.haveTranslation(result)) {
             //优化使用连字符的词的查询结果

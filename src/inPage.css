@@ -73,13 +73,13 @@
   width: 250px;
   overflow: auto;
   text-shadow: none;
-  background-color: #ffffdd;
+  background-color: rgb(255, 255, 221);
   text-align: left;
-  color: #222222;
+  color: rgb(34, 34, 34);
   padding: 10px;
   margin: 0px;
   opacity: 1;
-  border: 1px solid #999999;
+  border: 1px solid rgb(153, 153, 153);
   border-radius: 4px;
   z-index: 999997;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -101,9 +101,9 @@
   margin: 0;
 }
 .ChaZD-result-container .title-container {
-  background-color: #ffffdd;
+  background-color: rgb(255, 255, 221);
   border: none;
-  color: #222222;
+  color: rgb(34, 34, 34);
   display: block;
   max-width: 100%;
 }
@@ -131,11 +131,11 @@
 }
 .ChaZD-result-container .title-container .title-translation {
   display: none;
-  color: #222222;
+  color: rgb(34, 34, 34);
   margin-top: 10px;
 }
 .ChaZD-result-container .basic-container {
-  background-color: #ffffdd;
+  background-color: rgb(255, 255, 221);
   border: none;
 }
 .ChaZD-result-container .basic-container .phonetic-container .uk-phonetic-container, .ChaZD-result-container .basic-container .phonetic-container .us-phonetic-container {
@@ -144,14 +144,14 @@
   margin-right: 5px;
 }
 .ChaZD-result-container .basic-container .phonetic-container .uk-phonetic-container:before {
-  content: '英';
-  color: #222222;
+  content: "英";
+  color: rgb(34, 34, 34);
   font-size: 12px;
   margin-right: 2px;
 }
 .ChaZD-result-container .basic-container .phonetic-container .us-phonetic-container:before {
-  content: '美';
-  color: #222222;
+  content: "美";
+  color: rgb(34, 34, 34);
   font-size: 12px;
   margin-right: 2px;
 }
@@ -165,9 +165,7 @@
   margin: 0;
   padding: 0;
 }
-/*修改网络释义字体*/
-.ChaZD-result-container .basic-container .explains-container .explains-list .explains-item,
-.ChaZD-result-container .web-explains-container .web-explains-list li{
+.ChaZD-result-container .basic-container .explains-container .explains-list .explains-item {
   padding: 0px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 5px 0;
@@ -182,7 +180,7 @@
   display: block;
   float: left;
   font-weight: bold;
-  color: #222222;
+  color: rgb(34, 34, 34);
   margin-right: 5px;
 }
 .ChaZD-result-container .basic-container .explains-container .explains-list .explains-item .explains-item-value {
@@ -227,11 +225,11 @@
 }
 
 .ChaZD-arrow-outer-up {
-  border-bottom: 12px solid #999999;
+  border-bottom: 12px solid rgb(153, 153, 153);
 }
 
 .ChaZD-arrow-outer-down {
-  border-top: 12px solid #999999;
+  border-top: 12px solid rgb(153, 153, 153);
 }
 
 .ChaZD-arrow-inner-up, .ChaZD-arrow-inner-down {
@@ -244,12 +242,12 @@
 }
 
 .ChaZD-arrow-inner-up {
-  border-bottom: 10px solid #ffffdd;
+  border-bottom: 10px solid rgb(255, 255, 221);
   top: 2px;
 }
 
 .ChaZD-arrow-inner-down {
-  border-top: 10px solid #ffffdd;
+  border-top: 10px solid rgb(255, 255, 221);
 }
 
 a.ChaZD-link {
@@ -261,7 +259,7 @@ a.ChaZD-link {
 .ChaZD-result-container .voice-container::after {
   content: '\E803';
   font-family: "YDdict-Icon";
-  
+
   -webkit-transition: color 0.2s linear;
   transition : color 0.2s linear;
 }  
