@@ -375,6 +375,11 @@ chrome.runtime.onMessage.addListener(
         if(message.type !== undefined && message.type === 'voice') {
             var voice = new Audio();
             voice.src = message.src;
+            var voiceVolume = 0.5;
+            if (localStorage.getItem("voiceVolume")) {
+                voiceVolume = parseFloat(localStorage.getItem("voiceVolume"));
+            }
+            voice.volume = voiceVolume;
             voice.play();
         } else {
             new ChaZD(preprocessWord(message.queryWord), message.useHttps, message.source, sendResponse);

@@ -82,6 +82,11 @@ function buildVoice(voice) {
     //console.log("voice src: [] " + src);
     var audioBlock = document.createElement("audio");
     audioBlock.setAttribute("src", src);
+    var voiceVolume = 0.5;  // by default use 50% volume
+    if (localStorage.getItem("voiceVolume")) {
+        voiceVolume = parseFloat(localStorage.getItem("voiceVolume"));
+    };
+    audioBlock.volume = voiceVolume;
     voice.appendChild(audioBlock);
     audioBlock.addEventListener("ended", function (event) {
         //console.log("loading src: " + this.getAttribute("src"));
